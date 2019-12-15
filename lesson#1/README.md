@@ -16,13 +16,13 @@ To install DMD compiler:
 
 #### DUB is the official package manager for D programming langauge.
 With the help of DUB you can build and run your programs. It is especially
-useful when you need to include an external library. Just tell DUB 
-the name of the package/library, and DUB will fetch and build it for your 
+useful when you need an external library. Just tell DUB 
+the name of the package/library you would like to include, and DUB will fetch, download and build it for your 
 project.
 
 To install DUB package manager:
 1. Head over to www.github.com/dlang/dub/releases
-2. Choose you OS and download the official installer
+2. Choose your OS and download the official installer
 3. Launch the installer, it will install DUB package manager automatically
 
 #### Sublime Text is an editor for our code. It's simple and easy to use.
