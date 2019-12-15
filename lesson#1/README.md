@@ -5,8 +5,7 @@
 - DUB package manager
 - Sublime Text editor
 
-##### DMD a compiler for D programming language. It takes in the source code
-and produces executables. 
+#### DMD a compiler for D programming language. It takes in the source code and produces executables. 
 
 To install DMD compiler:
 1. Head over to the official website for
@@ -15,7 +14,7 @@ To install DMD compiler:
 3. Download DMD offcial installer
 4. Lauch the installer, it will isntall DMD compiler automatically
 
-##### DUB is the official package manager for D programming langauge.
+#### DUB is the official package manager for D programming langauge.
 With the help of DUB you can build and run your programs. It is especially
 useful when you need to include an external library. Just tell DUB 
 the name of the package/library, and DUB will fetch and build it for your 
@@ -26,7 +25,7 @@ To install DUB package manager:
 2. Choose you OS and download the official installer
 3. Launch the installer, it will install DUB package manager automatically
 
-##### Sublime Text is an editor for our code. It's simple and easy to use.
+#### Sublime Text is an editor for our code. It's simple and easy to use.
 
 To install Sublime Text:
 1. Head over to www.sublimetext.com
