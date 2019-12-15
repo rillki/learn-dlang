@@ -5,7 +5,7 @@
 - DUB package manager
 - Sublime Text editor
 
-#### DMD a compiler for D programming language. It takes in the source code and produces executables. 
+#### DMD is the official compiler for D programming language. It takes in the source code and produces executables. 
 
 To install DMD compiler:
 1. Head over to the official website for
