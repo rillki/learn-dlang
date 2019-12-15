@@ -14,5 +14,7 @@ import std.stdio; //	handles data input and output
 //	Our main function. Whenver you launch your program, it starts executing instructions from the main function. 
 //	A function is a group of statements that performs a certain task.
 void main() { 
-	writeln("Hello, Dlang!"); //	outputs text to terminal/console
+	writeln("Hello, Dlang!"); //	outputs "Hello, Dlang!" to terminal/console
 }
+
+
