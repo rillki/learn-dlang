@@ -12,7 +12,7 @@ To install DMD compiler:
 	D programming language: www.dlang.org
 2. Click on 'downloads'
 3. Download DMD offcial installer
-4. Lauch the installer, it will isntall DMD compiler automatically
+4. Lauch the installer, it will install DMD compiler automatically
 
 #### DUB is the official package manager for D programming langauge.
 With the help of DUB you can build and run your programs. It is especially
