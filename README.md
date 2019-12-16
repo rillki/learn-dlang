@@ -10,6 +10,6 @@ You can follow my youtube tutorial: https://www.youtube.com/playlist?list=PLgM-l
 #### Required software
 - DMD compiler
 - DUB package manager 
-- Your favoirite text editor (I use Sublime Text :)
+- Your favorite text editor (I use Sublime Text :)
 
 Have a nice day!
