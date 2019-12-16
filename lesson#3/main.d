@@ -14,10 +14,10 @@ void main() {
 	// 3 basic types: integers, floating-point, characters
 
 	//	basic data types
-	int a;				//	declaration of a variable
+	int a;			//	declaration of a variable
 	float b = 12.5;		//	initialization and declaration
-	double c;			//	double precision of float
-	char e;				//	a single character
+	double c;		//	double precision of float
+	char e;			//	a single character
 	char letterA = 'A';
 
 	//	outputing the value of variable b
