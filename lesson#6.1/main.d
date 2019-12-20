@@ -1,7 +1,7 @@
 //	Creating Hangman game
 //	LET'S LEARN: arrays(fixed-length vs dynamic),
-//						strings(char[] vs string) and immutability,
-//						reading strings from the user
+//			strings(char[] vs string) and immutability,
+//			reading strings from the user
 
 import std.stdio: writeln, write, readln;
 import std.string: strip;
@@ -28,8 +28,8 @@ void main() {
 		name[10] = ... 	// error, 10 is not < 10
 	*/
 
-	int[10] age = 0; 			// all age variables = 0;
-	char[21] oneName; 			// one dimensinal array, we assume name is no longer than 21
+	int[10] age = 0; 		// all age variables = 0;
+	char[21] oneName; 		// one dimensinal array, we assume name is no longer than 21
 	char[10][21] manyNames; 	// an array of one dimesional arrays of characters
 
 	/*
@@ -37,8 +37,8 @@ void main() {
 		name[0 ... < size_rows][0 ... < size_cols] = ...
 	*/
 
-	string oneName_string; 			// the same as char[resizeable]
-	string[10] manyNames_string; 	// the same as char[10][resizeable]
+	string oneName_string; 		// the same as char[]
+	string[10] manyNames_string; 	// the same as char[10][]
 
 	//------------------------------------
 
@@ -67,7 +67,7 @@ void main() {
 	//------------------------------------
 
 /*	write("Hi, what's your name: ");
-	//string name = readln(); 			// reads a '\n' new line character
+	//string name = readln(); 		// reads a '\n' new line character
 	string name = strip(readln()); 		// use strip to remove '\n'
 
 	writeln("Hi, ", name, ". Nice to meet you!");
@@ -86,8 +86,8 @@ void main() {
 
 	// dictionary contains words that player will have to guess
 	string[10] dictionary = [ "apple", "orange", "volleyball", "laptop",
-							"universe", "chicken", "theater", "window",
-							"violin", "guitar" ];
+				"universe", "chicken", "theater", "window",
+				"violin", "guitar" ];
 
 	// calling main menu function
 	mainMenu();
