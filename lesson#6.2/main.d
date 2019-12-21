@@ -16,15 +16,15 @@ void main() {
 	// generate a random number (index)		
 	int index = uniform(0, 10);
 	string word = dictionary[index]; 		// copy the selected word
-	char[] displayWord; 					// we print it to the screen
-	for(int i = 0; i < word.length; i++) {	// initialize displayWord by '_' to depict how many letter the selected word has
+	char[] displayWord; 				// we print it to the screen
+	for(int i = 0; i < word.length; i++) {		// initialize displayWord by '_' to depict how many letter the selected word has
 		displayWord ~= '_';
 	}
 
 	// calling main menu function
 	bool gameOver = mainMenu();			// mainMenu return false if player decides to play, true if player exits
 
-	char guess;							// a variable to store player's guess
+	char guess;					// a variable to store player's guess
 	int lettersGuessed = 0; 			// we need to know how many letters were guessed
 	while(!gameOver) {
 		printWord(displayWord);
@@ -40,7 +40,7 @@ void main() {
 			}
 		}
 
-		if(temp == lettersGuessed) { 	// if player didn't guess correctly, lives = lives - 1
+		if(temp == lettersGuessed) { 		// if player didn't guess correctly, lives = lives - 1
 			lives--;
 		}
 
