@@ -76,7 +76,7 @@ void print(char[3][3] array) {
 	writeln();
 
 	for(int i = 0; i < array.length; i++) {
-		write("\t", i);
+		write("\t", i); // '\t' character means tab
 	}
 	writeln();
 
