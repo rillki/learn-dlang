@@ -1,4 +1,4 @@
-//	Creating Tic Tac Toe (Noughts and Crosses) game
+//	Creating Tic Tac Toe (Noughts and Crosses) game (check ticTacToe.d)
 //	LET'S LEARN: passing a variable by value and by reference
 
 import std.stdio: writeln;
@@ -27,7 +27,7 @@ void modify(int argument) {
 */
 
 // passing by reference
-// when passing by reference, a fucntion copies the reference to the variable, and when modifying
+// when passing by reference, a function copies the reference to the variable, and when modifying
 // the argument of a function, changes the actual value of the original variable
 void modify(ref int argument) {
 	argument = 70;
