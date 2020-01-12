@@ -1,4 +1,4 @@
-//	Finishing Battleship game
+// Finishing Battleship game
 
 import std.stdio: writeln, write, readf;
 import std.conv: to;
@@ -36,7 +36,7 @@ void main() {
 	writeln("Thanks for playing!");
 }
 
-// print 10 empty lines (for formatting)
+// print 30 empty lines (for formatting)
 void clear() {
 	for(int i = 0; i < 30; i++) {
 		writeln();
@@ -95,7 +95,7 @@ void gamePlay(ref GameState gameState) {
 
 	// initializing ships
 	initShipPos(playerMap); 	// init player's ships (manually, by the player himself)
-	initEnemyShipPos(enemyMap); // init enemy's ships (randomization)
+	initEnemyShipPos(enemyMap); 	// init enemy's ships (randomization)
 
 	int player_ships_destroyed = 0;
 	int enemy_ships_destroyed = 0;
@@ -115,12 +115,12 @@ void gamePlay(ref GameState gameState) {
 		char x;
 		char y;
 		write("X coord to attack(e to exit): >>_"); readf(" %s", x);
-		if(x == 'e') { 						// if input = 'e', exit the game
+		if(x == 'e') { 		// if input = 'e', exit the game
 			gameState = GameState.EXIT;
 		}
 
 		write("Y coord to attack(e to exit): >>_"); readf(" %s", y);
-		if(y == 'e') { 						// if input = 'e', exit the game
+		if(y == 'e') { 		// if input = 'e', exit the game
 			gameState = GameState.EXIT;
 		}
 
@@ -129,7 +129,7 @@ void gamePlay(ref GameState gameState) {
 		int iy = to!int(y - '0');
 		
 		clear(); // clearing the screen by inserting new lines
-		// if (x, y) coordinates are greater than the bounds of the map or are negative, go to the begining
+		// if (x, y) coordinates are greater than the length of the map or negative, go to the begining
 		if(ix < 0 || ix > territory.length-1 || iy < 0 || iy > territory.length-1) {
 			continue;
 		}
@@ -150,7 +150,7 @@ void gamePlay(ref GameState gameState) {
 		// if player destroyed all of the enemy's ships, exit
 		if(player_ships_destroyed >= NUM_SHIPS) {
 			gameState = GameState.EXIT;
-			gameWon = true; 				// the player has won
+			gameWon = true; 			// the player has won
 		}
 
 		enemyAttack(playerMap, enemy_ships_destroyed);
@@ -158,7 +158,7 @@ void gamePlay(ref GameState gameState) {
 		// if enemy destroyed all of the player's ships, exit
 		if(enemy_ships_destroyed >= NUM_SHIPS) {
 			gameState = GameState.EXIT;
-			gameWon = false; 				// the player has lost
+			gameWon = false; 			// the player has lost
 		}
 	}
 
@@ -249,7 +249,7 @@ void enemyAttack(ref char[5][5] array, ref int ships_destroyed) {
 void display(char[5][5] array) {
 	write("  ");
 	for(int i = 0; i < array.length; i++) {
-		write("   ", i); // '\t' character means tab
+		write("   ", i);
 	}
 	writeln();
 
