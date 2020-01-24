@@ -18,7 +18,7 @@ void main() {
 
 		// draw
 		BeginDrawing(); 		// clear the screen
-		ClearBackground(WHITE); // set background color to WHITE
+		ClearBackground(WHITE); 	// set background color to WHITE
 
 		// draw "Hello, World!"
 		DrawText("Hello, World!", 10, 10, 60, BLACK);
