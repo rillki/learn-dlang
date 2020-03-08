@@ -23,7 +23,7 @@ void main() {
 	}
 
 	bool playersMove = true;	// tracking whose turn it is to make a move => x or o
-	bool draw = false; 			// if gameover and it is a draw
+	bool draw = false; 		// if gameover and it is a draw
 	bool gameOver = false;		// if gameover and somebody has won => x or o
 
 	int empty_squares = 9;
@@ -103,7 +103,7 @@ void main() {
 			}
 		}
 
-		if(draw) { 				// if the game is a draw
+		if(draw) { 		// if the game is a draw
 			DrawRectangleRec(Rectangle(0, 0, WIDTH, HEIGHT), Color(0, 0, 0, 160));
 			DrawText("It's a draw!", WIDTH/16, HEIGHT*2/5, 60, WHITE);
 		} else if(gameOver) { 	// if somebody has won
