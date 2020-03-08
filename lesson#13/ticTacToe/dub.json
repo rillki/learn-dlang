@@ -1,0 +1,13 @@
+{
+	"authors": [
+		"rillk500"
+	],
+	"copyright": "no copyright",
+	"dependencies": {
+		"raylib-d": "~>2.5.0"
+	},
+	"libs": [ "raylib" ],
+	"description": "A minimal D application.",
+	"license": "no license",
+	"name": "tictactoe"
+}
