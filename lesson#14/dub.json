@@ -1,0 +1,13 @@
+{
+	"authors": [
+		"rillk500"
+	],
+	"copyright": "no copyright",
+	"dependencies": {
+		"raylib-d": "~>2.5.0"
+	},
+	"libs": [ "raylib" ],
+	"description": "2D Snake Game",
+	"license": "no license",
+	"name": "lesson14"
+}

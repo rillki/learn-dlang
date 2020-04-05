@@ -1,0 +1,15 @@
+.dub
+docs.json
+__dummy.html
+docs/
+/lesson14
+lesson14.so
+lesson14.dylib
+lesson14.dll
+lesson14.a
+lesson14.lib
+lesson14-test-*
+*.exe
+*.o
+*.obj
+*.lst
