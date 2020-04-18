@@ -1,13 +1,13 @@
 import raylib;
 
 import std.string: toStringz;				// for converting D string into C string
-import std.random: uniform;					// random number generator
+import std.random: uniform;				// random number generator
 
 immutable int windowSize = 320;				// window width and height
 immutable int blockSize = 16;				// entity size
 
 enum GameStates { play, exit }				// game states
-enum Direction { up, down, left, right }	// direction
+enum Direction { up, down, left, right }		// direction
 
 // Fruit struct -> generates a fruit at random location
 struct Fruit {
@@ -42,9 +42,9 @@ struct Fruit {
 // Snake struct -> takes care of snake entity (updating snake logic, growing, movement, etc...)
 struct Snake {
 	Rectangle[100] rect = Rectangle(-blockSize, -blockSize, blockSize, blockSize);	// the snake: array of maximum snake length
-	Direction dir = Direction.up;		// direction
+	Direction dir = Direction.up;							// direction
 
-	int length = 5;						// snake length (max is windowSize^2 = 400 entities (16x16 size))
+	int length = 5;									// snake length (max is windowSize^2 = 400 entities (16x16 size))
 
 	// init
 	this(int posX, int posY) {
@@ -89,7 +89,7 @@ struct Snake {
 		}
 	}
 
-    // grow tail
+        // grow tail
 	void grow() {
 		length++;
 	}
@@ -105,18 +105,18 @@ struct Game {
 	bool gameOver = false;
 	double time = 0;
 
-	// initializing the game
+    // initializing the game
     this(string title) {
         InitWindow(windowSize, windowSize, title.toStringz);
         SetTargetFPS(30);
     }
 
-	// freing resources in the end of the game
+    // freing resources in the end of the game
     ~this() {
         CloseWindow();
     }
 
-	// processing game events
+    // processing game events
     void processEvents() {
         if(WindowShouldClose()) {
             gstate = GameStates.exit;
