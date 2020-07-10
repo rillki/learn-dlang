@@ -51,7 +51,7 @@ private void hello() { }
 // 2) c++ style
 public:
 	void hello() { }
-	// ...
+	// ....
 
 // 3) block style
 protected {
