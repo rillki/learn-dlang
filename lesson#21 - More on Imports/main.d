@@ -1,16 +1,23 @@
 // Aliased and Public imports
 
-import io = std.stdio;					// creating an alias io for std.stdio module
-import std.stdio: println = writeln;	// creating an alias println for writeln function
+// creating an alias io for std.stdio module
+import io = std.stdio;
 
-import school;							// importing school and student
+// creating an alias println for writeln function
+import std.stdio: println = writeln;
+
+// importing school and student
+import school;
 
 void main() {
-	io.writeln("Hello, World!\n");		// calling writeln using io (std.stdio.writeln)
+	// calling writeln using io (std.stdio.writeln)
+	io.writeln("Hello, World!\n");
 
-	println("Using println alias (writeln);\n");			// println => writeln
-	//writeln("Trying to call writeln.... oops...");		// error => writeln is undefined, println is defined
+	// println => writeln
+	println("Using println alias (writeln);\n");		
+	//writeln("Trying to call writeln.... oops..."); // error => writeln is undefined, println is defined
 
-	Student Julia;										// student is imported along with school, because => public import student
+	// student is imported along with school, because => public import student
+	Student Julia;
 	School unknownSchool = School(Julia);
 }
