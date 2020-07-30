@@ -1,0 +1,13 @@
+{
+	"authors": [
+		"rillk500"
+	],
+	"copyright": "no copyright",
+	"dependencies": {
+		"raylib-d": "~>3.0.2"
+	},
+	"libs": [ "raylib"  ], 
+	"description": "2D game with roguelike elements",
+	"license": "no license",
+	"name": "ourgame"
+}
