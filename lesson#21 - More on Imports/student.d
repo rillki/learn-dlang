@@ -1,0 +1,5 @@
+module student;
+
+struct Student {
+	// ...
+}
