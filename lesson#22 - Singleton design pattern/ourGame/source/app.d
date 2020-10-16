@@ -13,6 +13,7 @@ void main() {
         // process events
 
         // update
+		// calling the dummy function
 		GStateManager.getInstance().hello_world();
 
         // render
