@@ -3,7 +3,7 @@ import data;
 class GStateManager {
     private static GStateManager instance;
 
-    private this() {}
+    private this() { }
 
     static GStateManager getInstance() {
         if(instance is null) {
