@@ -1,4 +1,4 @@
-# Learn-Dlang-game-dev
+# Learn Dlang game dev
 Hi! Join me on the journey of creating 2d games from scratch in D programming language! We will start from making simple console games in D. Then, as we learn enough features of D language, we will download Raylib graphics library and start making 2D Games!
 
 <img src="img/dprogramming.jpeg">
