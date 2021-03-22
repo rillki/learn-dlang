@@ -1,0 +1,15 @@
+{
+	"authors": [
+		"rillki"
+	],
+	"copyright": "no copyright",
+	"dependencies": {
+		"raylib-d2": "~>3.1.0"
+	},
+	"description": "2D game",
+	"libs": [
+		"raylib"
+	],
+	"license": "no license",
+	"name": "ourgame"
+}
