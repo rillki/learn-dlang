@@ -1,0 +1,27 @@
+#1 | Installing DMD, DUB, Sublime Text | Let's learn DLang game dev
+
+Welcome back. In this video we are going to install the D compiler, DMD, Sublime Text editor,
+and DUB package manager.
+
+Let's start with the DMD compiler. Go to the dlang.org, the official D website, click on the
+"Downloads" and download the official installer for the DMD compiler. There are 3 compilers
+available. In general, the GDC and LDC offer advanced optimization and faster executables, 
+however, the DMD compiler is the official implementation of the language. It is developed 
+by the D community itself, hence, it is updated first and offers the latest featuers. For
+what we plan to do, DMD is a great starting point. 
+
+Next, let's install Sublime Text. Go to the sublimetext.com. Click on "Download", choose 
+your platform and install Sublime Text. 
+
+Finally, we need to install DUB. DUB is the official package manager for D applications 
+and libraries. The main purpose of DUB is to simplify the development process. It is 
+especially useful when you need an external library. It will fetch, download and build 
+the required libraries itself.
+
+To install DUB, navigate to github.com/dlang/dub/releases, choose your platform and
+download the official installer.
+
+In the next video, we will create our first program, we will learn how to use the
+Terminal, output text to the terminal window, compile and run our program. Have a nice day!
+
+

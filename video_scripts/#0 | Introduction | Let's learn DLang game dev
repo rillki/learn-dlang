@@ -1,0 +1,23 @@
+#0 | Introduction | Let's learn DLang game dev
+
+Hi and welcome to this series of learning game development in D programming language.
+D language succesfully combines high-level constructs of modern programming languages
+simultaneously retaining low-level features of of C/C++ programming language. Therefore,
+in my opinion, D is a perfect fit for game development. 
+
+In this tutorial series we will learn how to write 2D games in D programming language. We
+will start by learning the basics of D language by writing simple games such as Hangman, 
+Tic Tac Toe and Battleship. This games will be run from the terminal. Once we get comfortable
+with the language, we will start making 2D games using raylib graphics library. 
+
+At first, we will create a graphical version of our Tic Tac Toe game just to get aquanted 
+with the library, then we will do a snake game, and finally, a simple Rogue-like game or a
+platformer containing a main menu, settings and a few levels.
+
+You will need a DMD compiler, DUB package manager and any text editor. In the next video
+I will show how to install each of the software. Have a nice day!
+
+
+
+
+
