@@ -1,13 +1,27 @@
 {
 	"authors": [
-		"rillk500"
+		"rillki"
 	],
 	"copyright": "no copyright",
 	"dependencies": {
-		"raylib-d": "~>2.5.0"
+		"raylib-d": "~>3.0.4"
 	},
-	"libs": [ "raylib" ],
-	"description": "2D Snake Game",
+	"description": "2D game",
+	"lflags": [
+		"-framework",
+		"CoreVideo",
+		"-framework",
+		"IOKit",
+		"-framework",
+		"Cocoa",
+		"-framework",
+		"GLUT",
+		"-framework",
+		"OpenGL"
+	],
+	"libs": [
+		"raylib"
+	],
 	"license": "no license",
-	"name": "lesson14"
+	"name": "ourgame"
 }

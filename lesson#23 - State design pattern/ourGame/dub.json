@@ -1,12 +1,24 @@
 {
 	"authors": [
-		"rillk500"
+		"rillki"
 	],
 	"copyright": "no copyright",
 	"dependencies": {
-		"raylib-d": "~>3.0.3"
+		"raylib-d": "~>3.0.4"
 	},
 	"description": "2D game",
+	"lflags": [
+		"-framework",
+		"CoreVideo",
+		"-framework",
+		"IOKit",
+		"-framework",
+		"Cocoa",
+		"-framework",
+		"GLUT",
+		"-framework",
+		"OpenGL"
+	],
 	"libs": [
 		"raylib"
 	],

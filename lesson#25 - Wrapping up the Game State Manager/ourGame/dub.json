@@ -4,9 +4,21 @@
 	],
 	"copyright": "no copyright",
 	"dependencies": {
-		"raylib-d2": "~>3.1.0"
+		"raylib-d": "~>3.0.4"
 	},
 	"description": "2D game",
+	"lflags": [
+		"-framework",
+		"CoreVideo",
+		"-framework",
+		"IOKit",
+		"-framework",
+		"Cocoa",
+		"-framework",
+		"GLUT",
+		"-framework",
+		"OpenGL"
+	],
 	"libs": [
 		"raylib"
 	],
