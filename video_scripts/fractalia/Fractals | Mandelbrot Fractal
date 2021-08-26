@@ -1,0 +1,30 @@
+Fractals | Mandelbrot Fractal
+
+Hello and welcome back. Today we are going to implement the 
+Mandelbrot fractal. I will also show you how to implement zooming and 
+camera movements. 
+
+I am going to use D programming language and Raylib graphics library. But
+I will also upload the C version as well. The intrinsic logic is identical 
+though. So, you shouldn't have any problems following me in a language
+of your choice. 
+
+I have already created a new project. All it does at the moment is opening
+an empty window. 
+
+Let's move on to the Mandelbrot Set. 
+
+// explain theory
+
+// onto coding
+Firstly, we need to create some 
+preliminary variables.
+
+
+
+
+
+
+
+
+

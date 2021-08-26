@@ -1,0 +1,75 @@
+Setting up D with Raylib | Update 2021
+
+Hello and welcome. This is going to be an update on how to setup your D
+and Raylib project in all three major platforms: Linux, OSX and Windows.
+
+To follow this tutorial, you need to have a D compiler, DUB package 
+manager and Raylib graphics library already installed on your system. 
+You also need C MinGW compiler. This video won't show you how to install 
+them. Please refer to online tutorials and documentation. I will, however, 
+provide all necessary links to such sources in the video description. 
+
+Let's begin. Firstly, we need to create a new dub project using 'dub init' 
+command. It will ask you a few things about your project, but you can skip
+this part and edit everything later.
+
+At this point, your project folder should contain a dub.json configuration
+file. It may be dub.sdl if you have chosen the sdl file format. Open the
+file. 
+
+Secondly, we need to add the 'configurations' section. I prefer to put it
+right after the 'dependencies' section. 
+
+Then, using the curly braces, we add a new subsection containing 
+platform-specific information. By default, the configuration that matches 
+the target type and the current platform is selected automatically. Thus,
+we can support multiple platforms simoultaneously. 
+
+=== Configuring D and Raylib on OSX ===
+I will first create a configuration for OSX, then Linux and lastly Windows.
+Each configuration will follow the same pattern.
+
+- Firstly, comes the configuration name.
+- Secondly, the supported platforms. In this case it is OSX. 
+- Thirdly, we need to add the target type. I need an executable.
+- Then we need to tell dub what libraries it should link. In my case,
+it's only raylib. 
+- Finally, we may additionaly specify the linker flags if needed. On Mac
+you need to link the following frameworks. Just copy-paste it into your 
+file. 
+
+Thats it. Now the project should compile and run successfully. 
+
+=== Configuring D and Raylib on Linux ===
+Alright, let's create a new configuration for Linux. I am going to copy and
+paste the above configuration, and change its name and platform to linux. 
+
+I going to also delete the 'lflags' subsection as it is not needed here. 
+Instead, we need to tell dub to link against the following libraries... Put
+them into the 'libs' subsection. 
+
+The configuration is done. Now we can compile our code both on linux and
+MacOS. I am using Debian 10 in this example.    
+
+=== Configuring D and Raylib on Linux ===
+Finally, let's create our last configuration for Windows. 
+
+
+
+I highly recommend you add all three configurations for each platform. It
+will help newcomers and other people to easily compile and run your code
+without burdening them with reading the documentation and/or scaring them
+away. 
+
+
+
+
+
+
+
+
+
+
+
+
+
