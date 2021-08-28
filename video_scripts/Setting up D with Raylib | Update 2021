@@ -1,28 +1,29 @@
 Setting up D with Raylib | Update 2021
 
-Hello and welcome. This is going to be an update on how to setup your D
-and Raylib project in all three major platforms: Linux, OSX and Windows.
+Alright, hello everyone. This is going to be an update on how to setup your D
+and Raylib project on all three major platforms: Linux, OSX and Windows.
 
-To follow this tutorial, you need to have a D compiler, DUB package 
-manager and Raylib graphics library already installed on your system. 
-You also need C MinGW compiler. This video won't show you how to install 
-them. Please refer to online tutorials and documentation. I will, however, 
-provide all necessary links to such sources in the video description. 
+To follow this tutorial, you need a D compiler, DUB package 
+manager and Raylib graphics library already installed on your system. This 
+video won't show you how to install them, but will just give general 
+directions. Please refer to online tutorials and documentation. I will, 
+however, provide all the necessary links to such sources in the video 
+description. 
 
 Let's begin. Firstly, we need to create a new dub project using 'dub init' 
 command. It will ask you a few things about your project, but you can skip
-this part and edit everything later.
+this part and edit dub.json file instead.
 
 At this point, your project folder should contain a dub.json configuration
 file. It may be dub.sdl if you have chosen the sdl file format. Open the
 file. 
 
 Secondly, we need to add the 'configurations' section. I prefer to put it
-right after the 'dependencies' section. 
+right below 'dependencies'. 
 
 Then, using the curly braces, we add a new subsection containing 
 platform-specific information. By default, the configuration that matches 
-the target type and the current platform is selected automatically. Thus,
+the target type and the current platform DUB selects automatically. Thus,
 we can support multiple platforms simoultaneously. 
 
 === Configuring D and Raylib on OSX ===
@@ -31,22 +32,23 @@ Each configuration will follow the same pattern.
 
 - Firstly, comes the configuration name.
 - Secondly, the supported platforms. In this case it is OSX. 
-- Thirdly, we need to add the target type. I need an executable.
+- Thirdly, we need to add the target type. We need an executable.
 - Then we need to tell dub what libraries it should link. In my case,
-it's only raylib. 
-- Finally, we may additionaly specify the linker flags if needed. On Mac
+it's only raylib. If you have any other libraries, for instance, glfw, 
+put them here.
+- Finally, we may need to specify the linker flags additionally. On Mac
 you need to link the following frameworks. Just copy-paste it into your 
 file. 
 
-Thats it. Now the project should compile and run successfully. 
+Thats it. Our project should now compile and run successfully on OSX. 
 
 === Configuring D and Raylib on Linux ===
 Alright, let's create a new configuration for Linux. I am going to copy and
 paste the above configuration, and change its name and platform to linux. 
 
-I going to also delete the 'lflags' subsection as it is not needed here. 
+I will also delete the 'lflags' subsection as it is not needed here. 
 Instead, we need to tell dub to link against the following libraries... Put
-them into the 'libs' subsection. 
+them into the 'libs' subsection. These are raylib dependencies.
 
 The configuration is done. Now we can compile our code both on linux and
 MacOS. I am using Debian 10 in this example.    
@@ -54,14 +56,26 @@ MacOS. I am using Debian 10 in this example.
 === Configuring D and Raylib on Linux ===
 Finally, let's create our last configuration for Windows. 
 
+I am going to copy the above configuration again and modify the name and the
+platform replacing it with windows keyword. 
 
+The next step, is to add raylib library to libs subsection. Please note,
+instead of raylib, it should be raylibdll. 
 
-I highly recommend you add all three configurations for each platform. It
+And the last thing to do, is to download the raylib binaries from the official
+Raylib github repository. Just go to releases, and download the Microsoft
+Visual Studio version. Unzip the file, and copy the raylib.dll and 
+raylibdll.lib into your project's folder. 
+
+We are done. It should compile and run. Here's our raylib window. 
+
+Now you can configure Raylib and D for all three platforms. I highly 
+recommend you add all three configurations into your dub.json file. It
 will help newcomers and other people to easily compile and run your code
 without burdening them with reading the documentation and/or scaring them
-away. 
+away because of build errors. 
 
-
+That's it for today. Happy coding!
 
 
 
