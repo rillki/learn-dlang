@@ -1,2 +1,8 @@
 .dub
 .DS_Store
+bin/
+__internal/
+lib/
+*.lib
+*.a
+*.dll

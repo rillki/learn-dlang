@@ -2,7 +2,6 @@ module game.play;
 
 import game.data;
 import game.gstatemanager;
-
 import game.player;
 
 import std.file: getcwd;
@@ -10,6 +9,7 @@ import std.path: buildPath;
 import std.string: toStringz;
 
 class Play: IState {
+	// variables
 	private {
 		Texture2D texPlayer;
 		Player player;

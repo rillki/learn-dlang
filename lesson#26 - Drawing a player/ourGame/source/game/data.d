@@ -40,6 +40,9 @@ class Entity {
 	void draw() {
 		DrawTextureRec(texture, frame, position, Colors.WHITE);
 	}
+	
+	abstract void update();
+	abstract void processEvents();
 }
 
 
