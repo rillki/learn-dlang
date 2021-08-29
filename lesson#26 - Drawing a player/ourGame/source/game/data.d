@@ -42,6 +42,7 @@ class Entity {
 	}
 	
 	abstract void update();
+	abstract void processEvents();
 }
 
 

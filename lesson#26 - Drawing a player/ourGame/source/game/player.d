@@ -7,7 +7,8 @@ class Player: Entity {
 		super(texture, frame, position);
 	}
 	
-	override void update() { }
+	override void update() {}
+	override void processEvents() {}
 }
 
 
