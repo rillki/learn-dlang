@@ -1,0 +1,77 @@
+#26 | Drawing a player | Let's learn Dlang game dev
+
+Hello and welcome. Today we are going learn how to draw textures to the 
+screen. More specifically, we are going to draw a player figure that the user 
+will use to interact with our game world. All the resources I use, are 
+freely available for download from my github repo. The link is in the 
+description section.
+
+Alright, the first thing we are going to do, is to move all files to a 
+game package to avoid clutter. Then we need to rename the modules and, 
+finally, fix the imports. Compile and run to check if all is well. 
+
+Now we can start working on new functionality.
+
+We have a player, and we want to display it in our game window. 
+A player has certain size, position and a texture. It may also have a 
+draw and move functions. 
+
+Now suppose we have an enemy instead. It has the same properties as the
+player, doesn't it?
+
+What about an obstacle? A building, tree, rock? They too have the same 
+properties, but the only difference is they are stationary.
+
+So instead of creating a player, monster and an obstacle class, we can
+generalize it into an Entity and implement the base functionality only 
+once. Thus, we will be able to inherit that base functionality later on
+in our game and expand any further functionality if needed. For instance, an
+attack or a heal function for the player or enemy. 
+
+Let's implement what we have just discussed. 
+
+I am going to create an Entity class. It will have the following private 
+members: a texture, a frame for animations and a position. 
+
+Then I am going to implement a constructor taking in texture, frame and 
+position as arguments and just copying those values. 
+
+We also need to implement a move and a draw function that we will be able to 
+override in the future. 
+
+Finally, we may need an update and a processEvents function. Since their
+implementations strongly depend on the type of object, they are going to
+be abstract. This will enforce custom implementation upon inheritance. 
+
+That's it! Now we can go ahead and create our player class. It is going 
+to inherit all the default behaviour from the Entity class. It will also use 
+the entity's constructor upon initialization. We also must implement the 
+abstract update and processEvents functions. I am going to leave them
+empty for now.
+
+Alright, let's go to our play state. I am going to load player texture.
+Here it is. As you can see, it has multiple frames that can be used to 
+animate the player. Each frame is 80 by 110 pixels. 
+So, let's create a player instance and initialize it. 
+
+Finally, all that is left to do is to draw the player to the screen using
+the draw method we defined earlier. Compile and run.
+
+Now, do not forget to press 'P' in order to switch to the player state. Here 
+is our player!
+
+In the next video we are going to implements player movement and basic 
+animation.
+
+Have a nice day.
+
+
+
+
+
+
+
+
+
+
+
