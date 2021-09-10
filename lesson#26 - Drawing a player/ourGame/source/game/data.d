@@ -26,7 +26,7 @@ class Entity {
 	Rectangle frame;
 	Vector2 position;
 	
-	this(const Texture2D texture, const Rectangle frame, const Vector2 Position) { 
+	this(const ref Texture2D texture, const Rectangle frame, const Vector2 Position) { 
 		this.texture = texture;
 		this.frame = frame;
 		this.position = position;
