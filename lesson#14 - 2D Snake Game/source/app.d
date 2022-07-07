@@ -35,7 +35,7 @@ struct Fruit {
 			return;
 		}
 
-		DrawRectangleRec(rect, GREEN);
+		DrawRectangleRec(rect, Colors.GREEN);
 	}
 }
 
@@ -85,7 +85,7 @@ struct Snake {
 	// drawing
 	void render() {
 		for(int i = 0; i < length; i++) {
-			DrawRectangleRec(rect[i], RED);
+			DrawRectangleRec(rect[i], Colors.RED);
 		}
 	}
 
@@ -165,12 +165,12 @@ struct Game {
 	// drawing
 	void render() {
         BeginDrawing();
-		ClearBackground(WHITE);
+		ClearBackground(Colors.WHITE);
 
         // drawing the grid
         for(int i = 1; i < windowSize/blockSize; i++) {
-            DrawLineEx(Vector2(blockSize*i, 0), Vector2(blockSize*i, windowSize), 1, BLACK);
-            DrawLineEx(Vector2(0, blockSize*i), Vector2(windowSize, blockSize*i), 1, BLACK);
+            DrawLineEx(Vector2(blockSize*i, 0), Vector2(blockSize*i, windowSize), 1, Colors.BLACK);
+            DrawLineEx(Vector2(0, blockSize*i), Vector2(windowSize, blockSize*i), 1, Colors.BLACK);
         }
 
 		fruit.render();
@@ -178,7 +178,7 @@ struct Game {
 
 		if(gameOver) {
 			DrawRectangleRec(Rectangle(0, 0, windowSize, windowSize), Color(0, 0, 0, 150));
-			DrawText("Game Over!", 30, windowSize/2-48, 48, WHITE);
+			DrawText("Game Over!", 30, windowSize/2-48, 48, Colors.WHITE);
 		}
 
 		DrawFPS(10, 10);

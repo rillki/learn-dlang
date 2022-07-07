@@ -105,10 +105,10 @@ void main() {
 
 		if(draw) { 		// if the game is a draw
 			DrawRectangleRec(Rectangle(0, 0, WIDTH, HEIGHT), Color(0, 0, 0, 160));
-			DrawText("It's a draw!", WIDTH/16, HEIGHT*2/5, 60, WHITE);
+			DrawText("It's a draw!", WIDTH/16, HEIGHT*2/5, 60, Colors.WHITE);
 		} else if(gameOver) { 	// if somebody has won
 			DrawRectangleRec(Rectangle(0, 0, WIDTH, HEIGHT), Color(0, 0, 0, 160));
-			DrawText("You won!", WIDTH/8, HEIGHT*2/5, 70, WHITE);
+			DrawText("You won!", WIDTH/8, HEIGHT*2/5, 70, Colors.WHITE);
 		}
 
 		EndDrawing();

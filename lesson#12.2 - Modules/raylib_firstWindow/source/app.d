@@ -23,7 +23,7 @@ void main() {
 
 		// draw
 		BeginDrawing(); 		// clear the screen
-		ClearBackground(WHITE); // set background color to WHITE
+		ClearBackground(Colors.WHITE); // set background color to WHITE
 
 		entity.draw(); // draw entity texture to the window
 

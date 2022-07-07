@@ -15,7 +15,7 @@ struct Entity {
 
 	// member function: no need for arguments, member variables are visible to the function
 	void draw() {
-		DrawTexture(tex, x, y, WHITE);
+		DrawTexture(tex, x, y, Colors.WHITE);
 	}
 
 	// constructor this() {}

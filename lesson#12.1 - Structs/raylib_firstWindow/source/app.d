@@ -13,7 +13,7 @@ struct Entity {
 
 	// member function: no need for arguments, member variables are visible to the function
 	void draw() {
-		DrawTexture(tex, x, y, WHITE);
+		DrawTexture(tex, x, y, Colors.WHITE);
 	}
 
 	// constructor this() {}
@@ -51,7 +51,7 @@ void main() {
 
 		// draw
 		BeginDrawing(); 		// clear the screen
-		ClearBackground(WHITE); // set background color to WHITE
+		ClearBackground(Colors.WHITE); // set background color to WHITE
 
 		entity.draw(); // draw entity texture to the window
 

@@ -2,26 +2,52 @@
 	"authors": [
 		"rillki"
 	],
-	"copyright": "no copyright",
+	"copyright": "Copyright © 2021, rillki",
+	"targetPath": "bin",
 	"dependencies": {
-		"raylib-d": "~>3.0.4"
+		"raylib-d": "~>4.0.1"
 	},
-	"description": "2D game",
-	"lflags": [
-		"-framework",
-		"CoreVideo",
-		"-framework",
-		"IOKit",
-		"-framework",
-		"Cocoa",
-		"-framework",
-		"GLUT",
-		"-framework",
-		"OpenGL"
+	"configurations": [
+		{
+			"name": "osx-app",
+			"platforms": ["osx"],
+			"targetType": "executable",
+			"libs": [
+				"raylib"
+			],
+			"lflags": [
+				"-framework",
+				"IOKit",
+				"-framework",
+				"Cocoa",
+				"-framework",
+				"OpenGL"
+			],
+		},
+		{
+			"name": "linux-app",
+			"platforms": ["linux"],
+			"targetType": "executable",
+			"libs": [
+				"raylib",
+				"GL",
+				"m",
+				"pthread",
+				"dl",
+				"rt",
+				"X11"
+			],
+		},
+		{
+			"name": "windows-app",
+			"platforms": ["windows"],
+			"targetType": "executable",
+			"libs": [
+				"raylibdll"
+			],
+		},
 	],
-	"libs": [
-		"raylib"
-	],
+	"description": "D/Raylib minimal setup",
 	"license": "no license",
-	"name": "ourgame"
+	"name": "d-raylib-project-template"
 }

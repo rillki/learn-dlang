@@ -5,7 +5,7 @@
 	"copyright": "Copyright © 2021, rillki",
 	"targetPath": "bin",
 	"dependencies": {
-		"raylib-d": "~>3.1.0"
+		"raylib-d": "~>4.0.1"
 	},
 	"configurations": [
 		{
@@ -48,6 +48,6 @@
 		},
 	],
 	"description": "D/Raylib minimal setup",
-	"license": "MIT",
+	"license": "no license",
 	"name": "d-raylib-project-template"
 }

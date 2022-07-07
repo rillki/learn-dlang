@@ -18,19 +18,19 @@ void main() {
 
 		// draw
 		BeginDrawing(); 		// clear the screen
-		ClearBackground(WHITE); 	// set background color to WHITE
+		ClearBackground(Colors.WHITE); 	// set background color to WHITE
 
 		// draw "Hello, World!"
-		DrawText("Hello, World!", 10, 10, 60, BLACK);
+		DrawText("Hello, World!", 10, 10, 60, Colors.BLACK);
 
 		// draw a square 50x50
-		DrawRectangle(100, 100, 50, 50, BLACK);
+		DrawRectangle(100, 100, 50, 50, Colors.BLACK);
 
 		// draw a circle of radius = 100
-		DrawCircle(100, 200, 50, BLACK);
+		DrawCircle(100, 200, 50, Colors.BLACK);
 
 		// draw the image
-		DrawTexture(image, 100, 400, WHITE);
+		DrawTexture(image, 100, 400, Colors.WHITE);
 
 		// display
 		EndDrawing();
