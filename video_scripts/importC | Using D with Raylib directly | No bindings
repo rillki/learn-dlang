@@ -1,0 +1,43 @@
+Hello and welcome. 
+
+In this video we are going to explore a new feature of D called importC. 
+importC is a C11 compiler embedded into D, thus, enabling direct usage of C code.
+And today we are going create a Raylib project in D without using any of the 
+available bindings. We are going to use the Raylib library directly in our D 
+code.
+
+I have created project folder. For now it contains just the D source file. 
+It imports a raylib module, creates a window and renders some text to 
+its surface. 
+
+I am using the D version 2.100. 
+
+Now, lets use importC to build our project. 
+
+The first thing we need to do is to create a raylib.c file and include the 
+raylib header. There is one important thing I'd like to highlight before 
+we continue. importC does not have a preprocessor. So all the macros
+and defines won't be available in D. Therefore, if you need a macro from the C
+library, you need to redefine it using the C language. 
+
+For example, raylib uses defines to define a basic set of colors. To use those
+in my project I am going to create global color variables.
+
+The next step is to run that C file through the C preprocessor. And I will save
+the output of to raylib.i. 
+
+We are done. That's it. The final step is to compile our project using the 
+preprocessed raylib.i file and link the raylib library itself.
+
+It has successfully compiled the project and if run it... yeah, it works! 
+
+Alright, that's it for today. importC is still being developed, so I will 
+update this video in the future, once it is finalized.
+
+Have a nice day, and see you next time. 
+
+
+
+
+
+
