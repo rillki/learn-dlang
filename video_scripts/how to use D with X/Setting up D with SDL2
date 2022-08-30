@@ -1,0 +1,33 @@
+Setting up D with SDL2
+
+Hello and welcome. In this video we are going to set up a D and SDL2 project for Windows, Linux and MacOS. 
+We are going to use DUB and bindbc-sdl package. Make sure you have SDL2 libraries installed on your system. 
+If you are on windows, all you need are the dlls and put them into a libs folder in your project. 
+
+Let's begin. Initialize a new project and add the bindbc-sdl package. Then we need to modify the dub.json 
+configuration file. In the 'versions' section, specify the SDL libraries you plan to use. I am going to add
+SDL2_2020 version as the minimal required version, SDL_image, ttf, mixer and net. 
+
+We are done with the dub config file. Let's move on to the source file. 
+
+I will create a new function to dynamically load the SDL libraries. The algorithm is simple. We are going to 
+load the library, check for the error code and output an error message. 
+
+Before we continue, we need to specify the dll look up path if we compile on windows... That's it. 
+
+Now, let's load the SDL libraries... If we fail to load the library, then we output an error message, otherwise, 
+we have an old version the library installed on our system. So, we need to tell the user to install a newer
+version of the library.
+
+I will do the same for SDL_image, ttf, mixer and net...
+
+Alright, at this point we can already use the SDL functionality. So, I will create a new function to initialize 
+the SDL libraries... It should load the SDL libraries automatically, check for errors and return. 
+
+That's it! Now, we can initialize the libraries and start using the SDL functionality. 
+
+... coding ...
+
+That is it! It should now compile on all three platforms. I have tested it myself and it works fine. 
+If you have any questions, write a comment below. Have a nice day and enjoy!
+
