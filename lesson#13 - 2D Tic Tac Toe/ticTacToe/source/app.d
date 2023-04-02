@@ -5,6 +5,8 @@ import raylib;
 import std.conv: to;
 
 void main() {
+	validateRaylibBinding();
+	
 	// init
 	InitWindow(WIDTH, HEIGHT, "Dlang Tic Tac Toe");
 	SetTargetFPS(30);

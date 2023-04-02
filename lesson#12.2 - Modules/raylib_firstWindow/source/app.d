@@ -3,6 +3,8 @@ import test;
 import raylib;
 
 void main() {
+	validateRaylibBinding();
+	
 	// creating window
 	InitWindow(720, 640, "Dlang Raylib Window");
 	SetTargetFPS(30); // frames per second

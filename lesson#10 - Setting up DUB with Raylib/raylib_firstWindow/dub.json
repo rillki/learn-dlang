@@ -2,19 +2,8 @@
 	"authors": [
 		"rillki"
 	],
-	"copyright": "Copyright © 2021, rillki",
-	"targetPath": "bin",
-	"dependencies": {
-		"raylib-d": "~>4.0.1"
-	},
 	"configurations": [
 		{
-			"name": "osx-app",
-			"platforms": ["osx"],
-			"targetType": "executable",
-			"libs": [
-				"raylib"
-			],
 			"lflags": [
 				"-framework",
 				"IOKit",
@@ -23,11 +12,16 @@
 				"-framework",
 				"OpenGL"
 			],
+			"libs": [
+				"raylib"
+			],
+			"name": "osx-app",
+			"platforms": [
+				"osx"
+			],
+			"targetType": "executable"
 		},
 		{
-			"name": "linux-app",
-			"platforms": ["linux"],
-			"targetType": "executable",
 			"libs": [
 				"raylib",
 				"GL",
@@ -37,17 +31,29 @@
 				"rt",
 				"X11"
 			],
+			"name": "linux-app",
+			"platforms": [
+				"linux"
+			],
+			"targetType": "executable"
 		},
 		{
-			"name": "windows-app",
-			"platforms": ["windows"],
-			"targetType": "executable",
 			"libs": [
-				"raylibdll"
+				"raylib"
 			],
-		},
+			"name": "windows-app",
+			"platforms": [
+				"windows"
+			],
+			"targetType": "executable"
+		}
 	],
+	"copyright": "Copyright © 2021, rillki",
+	"dependencies": {
+		"raylib-d": "~>4.5.0"
+	},
 	"description": "D/Raylib minimal setup",
 	"license": "no license",
-	"name": "d-raylib-project-template"
+	"name": "d-raylib-project-template",
+	"targetPath": "bin"
 }

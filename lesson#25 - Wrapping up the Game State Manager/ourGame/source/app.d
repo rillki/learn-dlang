@@ -5,6 +5,8 @@ import menu;
 import play;
 
 void main() {
+    validateRaylibBinding();
+    
     // init
     InitWindow(windowWidth, windowHeight, "Mission X");
     scope(exit) { CloseWindow(); }
