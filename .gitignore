@@ -3,6 +3,6 @@
 bin/
 __internal/
 lib/
-*.lib
-*.a
-*.dll
+# *.lib
+# *.a
+# *.dll
