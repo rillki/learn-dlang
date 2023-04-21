@@ -1,14 +1,14 @@
 module game.player;
 
 import game.data;
-import game.animation;
-import game.animationmanager;
+import game.animation.animation;
+import game.animation.manager;
 
 class Player: Entity {
     private int playerSpeed;
     private AnimationManager animation;
 
-    this(const ref Texture2D texture, const Rectangle frame, const Vector2 position, const int playerSpeed) {
+    this(in Texture2D texture, in Rectangle frame, in Vector2 position, in int playerSpeed) {
         super(texture, frame, position);
         this.playerSpeed = playerSpeed;
 

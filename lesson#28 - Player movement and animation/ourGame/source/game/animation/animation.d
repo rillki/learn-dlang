@@ -1,4 +1,4 @@
-module game.animation;
+module game.animation.animation;
 
 import raylib;
 
@@ -13,7 +13,7 @@ struct Animation {
         bool isActive;
     }
 
-    this(const ref Texture2D texture, const int numFrames, const int numVerticalFrames, const float frameTimeSecs, const int row = 1) {
+    this(in Texture2D texture, in int numFrames, in int numVerticalFrames, in float frameTimeSecs, in int row = 1) {
         this.texture = texture;
         this.numFrames = numFrames;
         this.frameTimeSecs = frameTimeSecs;
@@ -54,7 +54,7 @@ struct Animation {
         }
     }
 
-    void draw(const Vector2 position) {
+    void draw(in Vector2 position) {
         DrawTextureRec(texture, rectFrames[currentFrame], position, Colors.WHITE);
     }
 }

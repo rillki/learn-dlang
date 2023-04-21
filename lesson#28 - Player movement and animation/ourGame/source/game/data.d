@@ -26,13 +26,13 @@ class Entity {
     Rectangle frame;
     Vector2 position;
     
-    this(const ref Texture2D texture, const Rectangle frame, const Vector2 Position) { 
+    this(in Texture2D texture, in Rectangle frame, in Vector2 Position) { 
         this.texture = texture;
         this.frame = frame;
         this.position = position;
     }
     
-    void move(const float x, const float y) {
+    void move(in float x, in float y) {
         position.x += x;
         position.y += y;
     }

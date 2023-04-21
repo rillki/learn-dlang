@@ -1,18 +1,18 @@
-module game.animationmanager;
+module game.animation.manager;
 
 import raylib;
-import game.animation;
+import game.animation.animation;
 
 struct AnimationManager {
     private Animation[KeyboardKey] animations;
     private KeyboardKey lastKey;
 
-    void addAnimation(KeyboardKey key, Animation animation) {
+    void addAnimation(in KeyboardKey key, Animation animation) {
         animations[key] = animation;
         lastKey = key;
     }
 
-    void update(KeyboardKey key) {
+    void update(in KeyboardKey key) {
         if(key in animations) {
             animations[key].start();
             animations[key].update();
@@ -23,7 +23,7 @@ struct AnimationManager {
         }
     }
 
-    void draw(const Vector2 position) {
+    void draw(in Vector2 position) {
         animations[lastKey].draw(position);
     }
 }
