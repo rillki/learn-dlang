@@ -3,13 +3,14 @@ module main;
 import std.stdio;
 
 void main() {
+    // --- `in` qualifier ---
     int kg = 5;
     int g = kg2g(kg);
 
     writeln("kg: ", kg);
     writeln(" g: ", g);
 
-    // --- --- ---
+    // --- `out` qualifier ---
     writeln("--- --- ---"); 
     
     int remainder = 0;
@@ -18,7 +19,7 @@ void main() {
     writeln("   result: ", result);
     writeln("remainder: ", remainder);
 
-    // --- --- --- 
+    // --- `inout` qualifier ---
     writeln("--- --- ---"); 
 
     int[] array = [1, 2, 3, 4];
@@ -29,7 +30,7 @@ void main() {
     const int[] constArrayResult = doSomething(constArray);
     immutable int[] immutableArrayResult = doSomething(immutableArray);
     
-    int[] arr = doSomething(constArray); // error! cannot do implicit conversion between type qualifiers
+    // int[] arr = doSomething(constArray); // error! cannot do implicit conversion between type qualifiers
     // Error: cannot implicitly convert expression `doSomething(constArray)` of type `const(int)[]` to `int[]`
 
     writeln(" a: ", arrayResult);
