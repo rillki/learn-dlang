@@ -48,7 +48,7 @@ class Play: IState {
         BeginDrawing(); scope(exit) { EndDrawing(); }
     
         // clear background
-        ClearBackground(Colors.YELLOW);
+        ClearBackground(Colors.GRAY);
         
         // draw
         player.draw();
