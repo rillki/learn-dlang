@@ -1,4 +1,4 @@
-module game.menu;
+module game.state.menu;
 
 import game.data;
 import game.gstatemanager;

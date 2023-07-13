@@ -2,8 +2,8 @@ module app;
 
 import game.data;
 import game.gstatemanager;
-import game.menu;
-import game.play;
+import game.state.menu;
+import game.state.play;
 
 void main() {
     validateRaylibBinding();

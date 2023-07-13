@@ -1,8 +1,9 @@
-module game.play;
+module game.state.play;
 
 import game.data;
 import game.gstatemanager;
-import game.player;
+import game.entity.player;
+import game.entity.coin;
 
 import std.file: getcwd;
 import std.path: buildPath;
@@ -11,19 +12,24 @@ import std.string: toStringz;
 class Play: IState {
     // variables
     private {
-        Texture2D texPlayer;
+        Texture2D texPlayer, texCoin;
         Player player;
+        Coin coin;
     }
     
     this() {
-        texPlayer = LoadTexture(getcwd.buildPath("../../assets/Evil Wizard/Evil Wizard.png").toStringz);
-        player = new Player(texPlayer, Rectangle(75, 75, 125, 125), Vector2(0, 0));
-        // texPlayer = LoadTexture(getcwd.buildPath("../../assets/fire/png/blue/loops/burning_loop_1_144x192.png").toStringz);
-        // player = new Player(texPlayer, Rectangle(0, 0, 144, 192), Vector2(0, 0));
+        // player
+        texPlayer = LoadTexture(getcwd.buildPath("../../assets/spritesheets/player/woodcutter/Woodcutter.png").toStringz);
+        player = new Player(texPlayer, Rectangle(0, 0, 48, 48), Vector2(0, 0));
+
+        // coin
+        texCoin = LoadTexture(getcwd.buildPath("../../assets/spritesheets/coins/MonedaD.png").toStringz);
+        coin = new Coin(texCoin, Rectangle(0, 0, 16, 16), Vector2(0, 0));
     }
     
     ~this() {
         UnloadTexture(texPlayer);
+        UnloadTexture(texCoin);
     }
 
     // inherited from IState interface
@@ -35,6 +41,7 @@ class Play: IState {
     
     void update() {
         player.update();
+        coin.update();
     }
 
     void processEvents() {
@@ -50,9 +57,10 @@ class Play: IState {
         BeginDrawing(); scope(exit) { EndDrawing(); }
     
         // clear background
-        ClearBackground(Colors.YELLOW);
+        ClearBackground(Colors.GRAY);
         
         // draw
         player.draw();
+        coin.draw();
     }
 }
