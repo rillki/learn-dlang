@@ -15,6 +15,6 @@ Take the Dlang Tour: https://tour.dlang.org/
 #### Required software
 - DMD compiler
 - DUB package manager 
-- Your favorite text editor (I use Sublime Text :)
+- Your favorite text editor (I use Visual Studio Code, sometimes Vim :)
 
 Have a nice day!
