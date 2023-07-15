@@ -7,13 +7,13 @@ struct AnimationManager {
     private Animation[KeyboardKey] animations;
     private KeyboardKey lastKey;
 
-    void addAnimation(in KeyboardKey key, Animation animation) {
+    void add(in KeyboardKey key, Animation animation) {
         animations[key] = animation;
         lastKey = key;
     }
 
     void update(in KeyboardKey key) {
-        if(key in animations) {
+        if (key in animations) {
             animations[key].start();
             animations[key].update();
             lastKey = key;
@@ -27,3 +27,4 @@ struct AnimationManager {
         animations[lastKey].draw(position);
     }
 }
+

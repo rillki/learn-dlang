@@ -26,7 +26,7 @@ class Entity {
     Rectangle frame;
     Vector2 position;
     
-    this(in Texture2D texture, in Rectangle frame, in Vector2 Position) { 
+    this(in Texture2D texture, in Rectangle frame, in Vector2 position) { 
         this.texture = texture;
         this.frame = frame;
         this.position = position;
@@ -44,11 +44,4 @@ class Entity {
     abstract void update();
     abstract void processEvents();
 }
-
-
-
-
-
-
-
 

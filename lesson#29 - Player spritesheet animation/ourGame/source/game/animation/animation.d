@@ -13,7 +13,7 @@ struct Animation {
         bool isActive;
     }
 
-    this(in Texture2D texture, in int numFrames, in int numVerticalFrames, in float frameTimeSecs, in int row = 1) {
+    this(in Texture2D texture, in int numFrames, in int numRows, in float frameTimeSecs, in int useRow = 1) {
         this.texture = texture;
         this.numFrames = numFrames;
         this.frameTimeSecs = frameTimeSecs;
@@ -23,9 +23,9 @@ struct Animation {
 
         // create rectangle frames
         immutable frameWidth = texture.width / numFrames;
-        immutable frameHeight = texture.height / numVerticalFrames;
+        immutable frameHeight = texture.height / numRows;
         foreach(i; 0 .. numFrames) {
-            this.rectFrames ~= Rectangle(i * frameWidth, (row - 1) * frameHeight, frameWidth, frameHeight);
+            this.rectFrames ~= Rectangle(i * frameWidth, (useRow - 1) * frameHeight, frameWidth, frameHeight);
         }
     }
     
@@ -48,7 +48,7 @@ struct Animation {
         }
 
         frameTimeSecsLeft -= GetFrameTime();
-        if(frameTimeSecsLeft < 0) {
+        if(frameTimeSecsLeft <= 0) {
             frameTimeSecsLeft += frameTimeSecs;
             currentFrame = (currentFrame + 1) % numFrames;
         }
