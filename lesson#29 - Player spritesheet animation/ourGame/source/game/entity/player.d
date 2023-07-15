@@ -12,14 +12,14 @@ class Player: Entity {
         super(texture, frame, position);
 
         this.movementSpeed = movementSpeed;
-        animationManager.add(KeyboardKey.KEY_NULL, Animation(texture, 6, 6, 0.15, 1));
-        animationManager.add(KeyboardKey.KEY_W, Animation(texture, 6, 6, 0.1, 5));
-        animationManager.add(KeyboardKey.KEY_S, Animation(texture, 6, 6, 0.1, 5));
-        animationManager.add(KeyboardKey.KEY_A, Animation(texture, 6, 6, 0.1, 6));
-        animationManager.add(KeyboardKey.KEY_D, Animation(texture, 6, 6, 0.1, 5));
-        animationManager.add(KeyboardKey.KEY_SPACE, Animation(texture, 6, 6, 0.12, 2));
-        animationManager.add(KeyboardKey.KEY_X, Animation(texture, 6, 6, 0.1, 3));
-        animationManager.add(KeyboardKey.KEY_Z, Animation(texture, 6, 6, 0.13, 4));
+        animationManager.add(KeyboardKey.KEY_NULL, Animation(texture, 6, 5, 0.15, 1));
+        animationManager.add(KeyboardKey.KEY_W, Animation(texture, 6, 5, 0.1, 5));
+        animationManager.add(KeyboardKey.KEY_S, Animation(texture, 6, 5, 0.1, 5));
+        animationManager.add(KeyboardKey.KEY_A, Animation(texture, 6, 5, 0.1, 5, true));
+        animationManager.add(KeyboardKey.KEY_D, Animation(texture, 6, 5, 0.1, 5));
+        animationManager.add(KeyboardKey.KEY_SPACE, Animation(texture, 6, 5, 0.12, 2));
+        animationManager.add(KeyboardKey.KEY_X, Animation(texture, 6, 5, 0.1, 3));
+        animationManager.add(KeyboardKey.KEY_Z, Animation(texture, 6, 5, 0.13, 4));
     }
     
     override void update() {}

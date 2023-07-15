@@ -11,15 +11,17 @@ struct Animation {
         float frameTimeSecs;
         float frameTimeSecsLeft;
         bool isActive;
+        bool flip;
     }
 
-    this(in Texture2D texture, in int numFrames, in int numRows, in float frameTimeSecs, in int useRow = 1) {
+    this(in Texture2D texture, in int numFrames, in int numRows, in float frameTimeSecs, in int useRow = 1, in bool flip = false) {
         this.texture = texture;
         this.numFrames = numFrames;
         this.frameTimeSecs = frameTimeSecs;
         this.frameTimeSecsLeft = frameTimeSecs;
         this.currentFrame = 0;
         this.isActive = true;
+        this.flip = flip;
 
         // create rectangle frames
         immutable frameWidth = texture.width / numFrames;
@@ -55,7 +57,18 @@ struct Animation {
     }
 
     void draw(in Vector2 position) {
-        DrawTextureRec(texture, rectFrames[currentFrame], position, Colors.WHITE);
+        if (flip) {
+            DrawTextureRec(texture, 
+                Rectangle(
+                    rectFrames[currentFrame].x, 
+                    rectFrames[currentFrame].y, 
+                    -rectFrames[currentFrame].width, 
+                    rectFrames[currentFrame].height
+                ), 
+            position, Colors.WHITE);
+        } else {
+            DrawTextureRec(texture, rectFrames[currentFrame], position, Colors.WHITE);
+        }
     }
 }
 
