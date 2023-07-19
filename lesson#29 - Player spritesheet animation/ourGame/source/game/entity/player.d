@@ -38,7 +38,6 @@ class Player: Entity {
             this.move(movementSpeed, 0);
             animationManager.update(KeyboardKey.KEY_D);
         } else if (IsKeyDown(KeyboardKey.KEY_SPACE)) {
-            //
             animationManager.update(KeyboardKey.KEY_SPACE);
         } else if (IsKeyDown(KeyboardKey.KEY_X)) {
             animationManager.update(KeyboardKey.KEY_X);
