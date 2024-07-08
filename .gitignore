@@ -9,4 +9,5 @@ lib/
 *.dll
 *.out
 *.exe
+*.pdb
 d-raylib-project-template
