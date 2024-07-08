@@ -18,5 +18,12 @@ Take the Dlang Tour: https://tour.dlang.org/
 - DMD compiler
 - DUB package manager 
 - Your favorite text editor (I use Visual Studio Code, sometimes Vim :)
+- Raylib graphics library
+
+#### Build and run
+```
+dub run raylib-d:install
+dub
+```
 
 Have a nice day!
