@@ -10,8 +10,10 @@
     "lflags-posix" : ["-L."],
     "lflags-osx" : ["-rpath", "@executable_path/"],
     "lflags-linux" : ["-rpath=$$ORIGIN"],
+    "preBuildCommands": [
+		"dub run raylib-d:install"
+	],
 	"description": "D/Raylib minimal setup",
 	"license": "no license",
-	"name": "d-raylib-project-template",
-	"targetPath": "bin"
+	"name": "d-raylib-project-template"
 }

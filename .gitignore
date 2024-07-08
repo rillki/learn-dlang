@@ -3,6 +3,10 @@
 bin/
 __internal/
 lib/
-# *.lib
-# *.a
-# *.dll
+*.dylib
+*.lib
+*.a
+*.dll
+*.out
+*.exe
+d-raylib-project-template
