@@ -71,7 +71,7 @@ void main() {
 		}
 
 		// PROCESSING EVENTS 
-		if(IsMouseButtonPressed(MouseButton.MOUSE_LEFT_BUTTON) || IsMouseButtonPressed(MouseButton.MOUSE_RIGHT_BUTTON)) {
+		if(IsMouseButtonPressed(MouseButton.MOUSE_BUTTON_LEFT) || IsMouseButtonPressed(MouseButton.MOUSE_BUTTON_RIGHT)) {
 			// getting i and j ID of squares
 			// since we convert x and y pos divided by SIZE to an integer, we get the exact number (i, j) of the square our mouse points to
 			// => 90/128 < 0 and if we convert it to an integer we get 0

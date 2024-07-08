@@ -2,58 +2,18 @@
 	"authors": [
 		"rillki"
 	],
-	"configurations": [
-		{
-			"lflags": [
-				"-framework",
-				"IOKit",
-				"-framework",
-				"Cocoa",
-				"-framework",
-				"OpenGL"
-			],
-			"libs": [
-				"raylib"
-			],
-			"name": "osx-app",
-			"platforms": [
-				"osx"
-			],
-			"targetType": "executable"
-		},
-		{
-			"libs": [
-				"raylib",
-				"GL",
-				"m",
-				"pthread",
-				"dl",
-				"rt",
-				"X11"
-			],
-			"name": "linux-app",
-			"platforms": [
-				"linux"
-			],
-			"targetType": "executable"
-		},
-		{
-			"libs": [
-				"raylib"
-			],
-			"name": "windows-app",
-			"platforms": [
-				"windows"
-			],
-			"targetType": "executable"
-		}
-	],
 	"copyright": "Copyright © 2021, rillki",
 	"dependencies": {
-		"raylib-d": "~>4.5.0"
+		"raylib-d": "~>5.0.1"
 	},
+    "libs": [ "raylib" ],
+    "lflags-posix" : ["-L."],
+    "lflags-osx" : ["-rpath", "@executable_path/"],
+    "lflags-linux" : ["-rpath=$$ORIGIN"],
+    "preBuildCommands": [
+		"dub run raylib-d:install"
+	],
 	"description": "D/Raylib minimal setup",
 	"license": "no license",
-	"name": "d-raylib-project-template",
-	"targetPath": "bin"
+	"name": "d-raylib-project-template"
 }
