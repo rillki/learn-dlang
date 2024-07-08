@@ -6,13 +6,10 @@
 	"dependencies": {
 		"raylib-d": "~>5.0.1"
 	},
-    "libs": [ "raylib" ],
-    "lflags-posix" : ["-L."],
-    "lflags-osx" : ["-rpath", "@executable_path/"],
-    "lflags-linux" : ["-rpath=$$ORIGIN"],
-    "preBuildCommands": [
-		"dub run raylib-d:install"
-	],
+	"libs": [ "raylib" ],
+	"lflags-posix" : ["-L."],
+	"lflags-osx" : ["-rpath", "@executable_path/"],
+	"lflags-linux" : ["-rpath=$$ORIGIN"],
 	"description": "D/Raylib minimal setup",
 	"license": "no license",
 	"name": "d-raylib-project-template"
